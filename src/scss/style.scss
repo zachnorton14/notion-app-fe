@@ -1,0 +1,1000 @@
+
+// HOME//
+
+.homecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    .homesplash {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        .hometitlecontainer{
+            width: 100%;
+            h1 {
+                font-family: "Figtree";
+                font-weight: 900;
+                font-size: 80px;
+                margin-bottom: 10px;
+            }
+            h3 {
+                font-family: "Figtree";
+                font-size: 30px;
+            }
+            p {
+                font-family: "Figtree";
+            }
+        }
+    }
+    .enterbuttoncontainer {
+        height: 65vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        .enterbutton{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            button {
+                height: 6rem;
+                width: 16rem;
+                font-family: "Figtree";
+                background-color: #f1d592;
+                font-size: 40px;
+                font-weight: 700;
+                border-style: none;
+                border-radius: 5px;
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                &:hover {
+                    background-color: #edca78;
+                }
+            }
+        }
+        .entertext {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            p {
+                text-align: center;
+                max-width: 40vw;
+                color: rgb(105, 105, 105)
+            }
+        }
+        
+    }
+    .aboutsection {
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 15px;
+        background-color: rgb(235, 235, 235);
+        border-radius: 10px;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            font-family: "Figtree";
+        }
+        hr {
+            width: 40%;
+            background-color: lightgray;
+        }
+        p {
+            margin-top: 0;
+            text-align: center;
+            width: 80%;
+            font-family: "Figtree";
+            font-size: 18px;
+            font-weight: 100;
+        }
+    }
+}
+
+// DASH
+
+.dashboardcontainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    h1 {
+        width: 100%;
+        font-family: "Figtree";
+        font-size: 50px;
+    }
+    .personalfolderscontainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        h2 {
+            margin-top: 0;
+            width: 100%;
+            font-family: "Figtree";
+            font-size: 30px;
+        }
+        p {
+            width: 100%;
+            font-family: "Figtree";
+            font-size: 15px;
+            color: rgb(105, 105, 105)
+        }
+        #draft {
+            margin-bottom: 38px;
+        }
+        .folderscontainer {
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 20px;
+            border-radius: 7px;
+            display: row;
+            flex-direction: column;
+            width: 100%;
+            h3 {
+                width: 100%;
+                margin-top: 0;
+                font-family: "Figtree";
+                font-size: 20px;
+            }
+            p {
+                width: 100%;
+                font-family: "Figtree";
+                font-size: 15px;
+                color: #696969;
+            }
+            .folderspace {
+                padding: 10px 4px 10px 4px;
+            }
+            .folders {
+                margin: 5px 2px 5px 2px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .nodraftfolders{
+                    height: 40px;
+                    margin: 5px 2px 5px 2px;
+                    line-height: 2.5;
+                }
+                #folder {
+                    width: 100%;
+                    height: 40px;
+                    display: flex;
+                    margin: 5px;
+                    svg {
+                        padding: 5px;
+                        color:#f1d592;
+                        width: 30px;
+                        height: 30px;
+                    }
+                    button {
+                        font-family: "Figtree";
+                        font-size: 15px;
+                        margin-left: 10px;
+                        height: 40px;
+                        width: 100%;
+                        border-color: rgb(235, 235, 235);
+                        border-style: solid;
+                        border-radius: 3px;
+                        &:hover {
+                            background-color: rgb(235, 235, 235);
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                }
+                p {
+                    width: 100%;
+                }
+            }
+            .createfoldercontainer {
+                height: 40px;
+                margin: 5px;
+                display: flex;
+                height: 30px;
+                .createbuttonspacer {
+                    padding: 5px;
+                    height: 30px;
+                    width: 30px;
+                }
+                .createfolderbutton {
+                    height: 40px;
+                    width: 100%;
+                    display: flex;
+                    margin-left: 10px;
+                    align-items: center;
+                    align-content: center;
+                    &:hover {
+                        text-decoration: underline;
+                        background-color:#f8f8f8;
+                        border-radius: 5px;
+                    }
+                    svg {
+                        width: 30px;
+                    }
+                    p {
+                        margin: 0;
+                        margin-left: 5px;
+                        line-height: 1;
+                    }
+                }
+            }  
+        }
+    }
+
+    .notloggedinheader {
+        font-family: "Figtree";
+        .notloggedin {
+            // box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 7px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 7px;
+            padding: 20px;
+            background-color: rgb(255, 219, 219);
+            display: flex;
+            flex-wrap: wrap;
+            h4 {
+                margin: 10px 0 10px 0;
+                width: 100%;
+                font-size: 20px;
+            }
+            p {
+                margin: 10px 0 10px 0;
+                width: 100%;
+                font-size: 17px;
+            }
+            button{
+                margin: 10px 10px 10px 0;
+            }
+        }
+    }
+
+    .notloggedindash {
+        font-family: "Figtree";
+        h2 {
+            width: 100%;
+            font-size: 30px;
+        }
+        p {
+            font-size: 17px;
+            width: 100%;
+        }
+    }
+
+    .publicfolderscontainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        h2 {
+            width: 100%;
+            font-family: "Figtree";
+            font-size: 30px;
+        }
+        p {
+            margin-top: 0;
+            width: 100%;
+            font-size: 17px;
+            color: rgb(105, 105, 105)
+        }
+        .folderscontainer {
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 20px;
+            border-radius: 7px;
+            display: row;
+            flex-direction: column;
+            width: 100%;
+            h3 {
+                width: 100%;
+                margin-top: 0;
+                font-family: "Figtree";
+                font-size: 20px;
+            }
+            p {
+                width: 100%;
+                font-size: 17px;
+                color: rgb(105, 105, 105)
+            }
+            .folderspace {
+                padding: 10px 4px 10px 4px;
+            }
+            .folders {
+                margin: 5px 2px 5px 2px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                #folder {
+                    width: 100%;
+                    height: 40px;
+                    display: flex;
+                    margin: 5px;
+                    svg {
+                        padding: 5px;
+                        color:#f1d592;
+                        width: 30px;
+                        height: 30px;
+                    }
+                    button {
+                        font-family: "Figtree";
+                        font-size: 15px;
+                        margin-left: 10px;
+                        height: 40px;
+                        width: 100%;
+                        border-color: rgb(235, 235, 235);
+                        border-style: solid;
+                        border-radius: 3px;
+                        &:hover {
+                            background-color: rgb(235, 235, 235);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+// LOGIN & SIGNUP
+
+.logincontainer {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(241, 241, 241);
+    border-radius: 7px;
+    margin: auto;
+    height: 50vh;
+    margin-top: 10vw;
+    h1 {
+        text-align: center;
+        font-family: "Figtree";
+        width: 100%;
+        height: 40px;
+    }
+    
+    .loginformcontainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+            .logininputcontainer {
+                width: 100%;
+                border-color: magenta;
+                height: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .logininput {
+                    display: block;
+                    margin: 10px 0 10px 0;
+                    width: 70%;
+                    font-family: "Figtree";
+                    padding: 7px;
+                }
+            }
+        
+        .loginsubmitcontainer{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    p {
+        text-align: center;
+        margin: auto;
+        height: 25%;
+        line-height: 9;
+    }
+}
+
+// FOLDER
+
+.folderviewcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .foldertitle {
+        display: flex;
+        width: 100%;
+        // justify-content: space-between;
+        .foldername{
+            // max-width: 800px;
+            display: flex;
+            width: 100%;
+            div {
+                float: left;
+                display: flex;
+                align-items: center;
+                svg {
+                    float: right;
+                    margin: 10px;
+                    font-size: 50px;
+                    color: #f1d592;
+                }
+            }
+            h1 {
+                font-family: "Figtree";
+                font-size: 50px;
+                margin: 35.5px 2px 35.5px 2px;
+            }
+        }
+        .folderprefbuttons {
+            float: right;
+            display: flex;
+            align-items: center;
+            button {
+                display: inline;
+                margin: 10px;
+            }
+            
+        }
+        input {
+            width: 85%;
+            font-family: "Figtree";
+            font-weight: 900;
+            font-size: 50px;
+            margin: 33.5px 0 33.5px 0;
+        }
+    }
+    h2 {
+        margin-top: 0;
+        margin-left: 15px;
+        font-family: "Figtree";
+        font-size: 30px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    h3 {
+        margin-top: 0;
+        margin-left: 15px;
+        font-weight: 400;
+        font-family: "Figtree";
+        width: 100%;
+        color: rgb(105, 105, 105)
+    }
+    .publishsection {
+        width: 100%;
+        margin-top: 30px;
+        div {
+            svg {
+                padding: 5px 5px 0 5px;
+                width: 15px;
+                height: 15px;
+            }
+            p{
+                background-color: rgb(241, 241, 241);
+                color: rgb(0, 0, 0);
+                border-radius: 7px;
+                padding: 10px;
+            }
+        }
+    }
+   
+
+    .notedisplay {
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 20px;
+        border-radius: 7px;
+        max-height: 50vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        #note {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            margin: 5px;
+            svg {
+                padding: 5px;
+                color:#5e5e5e;
+                width: 30px;
+                height: 30px;
+            }
+            button {
+                font-family: "Figtree";
+                font-size: 15px;
+                margin-left: 10px;
+                height: 40px;
+                width: 100%;
+                border-color: rgb(235, 235, 235);
+                border-style: solid;
+                border-radius: 3px;
+                &:hover {
+                    background-color: rgb(235, 235, 235);
+                    text-decoration: underline;
+                }
+            }
+        }
+        .createfoldercontainer {
+            width: 100%;
+            height: 40px;
+            margin: 5px;
+            display: flex;
+            height: 30px;
+            .createbuttonspacer {
+                padding: 5px;
+                height: 30px;
+                width: 30px;
+            }
+            .createfolderbutton {
+                height: 40px;
+                width: 100%;
+                display: flex;
+                margin-left: 10px;
+                align-items: center;
+                align-content: center;
+                &:hover {
+                    text-decoration: underline;
+                    background-color:#f8f8f8;
+                    border-radius: 5px;
+                }
+                svg {
+                    width: 30px;
+                }
+                p {
+                    margin: 0;
+                    margin-left: 5px;
+                    line-height: 1;
+                }
+            }
+        }  
+
+    }
+    .editingfoldername{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        div {
+            width: 100%;
+            input {
+                padding: 0;
+            }
+        }
+        button {
+            margin: 10px;
+        }
+    }
+    
+}
+
+// PROFILE
+
+.profilecontainer {
+    margin-top: 33.5px;
+    width: 100%;
+    .profileview {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 400;
+        font-family: "Figtree";
+        justify-content: center;
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: solid #d3d3d3 4px;
+        }
+        .userheader {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            h1 {
+                margin: 2px;
+                text-align: center;
+                width: 100%;
+                font-size: 50px;
+            }
+            h3 {
+                margin: 2px;
+                font-weight: 300;
+            }
+        }
+    }
+    
+    .profileprefbuttons {
+        float: right;
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin: 10px;
+        }     
+    }  
+
+    .editprofileview {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: 400;
+        font-family: "Figtree";
+        justify-content: center;
+        .editprofile {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .editprofilepicturecontainer {
+                display: flex;
+                flex-wrap: wrap;
+                width: 210px;
+                justify-content: center;
+                div { 
+                    width: 100%;
+                    img {
+                        height: 200px;
+                        width: 200px;
+                        border-radius: 50%;
+                        border: solid #d3d3d3 4px;
+                    }
+                }
+                input {
+                    width: 186px;
+                    font-family: "Figtree";
+                    padding: 7px;
+                    text-align: center;
+                }
+            }
+            .edituserheader {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                height: 208px;
+                .editusernamecontainer {
+                    display: flex;
+                    justify-content: center;
+                    .editusername {
+                        text-align: center;
+                        width: 100%;
+                        margin: auto;
+                        font-size: 50px;
+                        font-family: "Figtree";
+                        font-weight: 800;
+                        padding: 0;
+                        width: 489.68px;
+                        text-align: center;
+                    }
+                }
+                .editbiocontainer {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    .editbio {
+                        font-family: "Figtree";
+                        padding: 0;
+                        font-weight: 400;
+                        font-size: 18.5px;
+                        width: 100%;
+                        text-align: center;
+                        
+                    }
+                }
+            }
+            
+        }
+
+        .confirmeditprofile {
+            width: 100%;
+            display: flex;
+            
+            justify-content: flex-end;
+            button {
+                margin: 10px;
+            }
+        }
+    }
+}
+
+// NOTES
+
+.noteviewcontainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    .noteheader {
+        display: flex;
+        width: 100%;
+        .notename {
+            display: flex;
+            width: 100%;
+            div {
+                float: left;
+                display: flex;
+                align-items: center;
+                svg {
+                    float: right;
+                    margin: 10px;
+                    font-size: 50px;
+                    color: #5e5e5e;
+                }
+            }
+            h1 {
+                font-family: "Figtree";
+                font-size: 50px;
+                margin: 25.5px 2px 25.5px 2px;
+                padding: 1px 2px 1px 2px;
+            }
+        }
+        .noteprefbuttons {
+            float: right;
+            display: flex;
+            align-items: center;
+            button {
+                display: inline;
+                margin: 10px;
+            }
+        }
+        input {
+            width: 85%;
+            font-family: "Figtree";
+            font-weight: 900;
+            font-size: 50px;
+            margin: 23.5px 0 23.5px 0;
+        }
+    }
+    h5 {
+        margin: 0;
+        margin-left: 15px;
+        font-family: "Figtree";
+        font-weight: 100;
+        font-size: 15px;
+        width: 100%;
+        color: rgb(105, 105, 105)
+    }
+
+    
+    h2 {
+        margin-left: 15px;
+        font-family: "Figtree";
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .descriptioncontainer {
+        background-color: rgb(244, 244, 244);
+        border-radius: 7px;
+        padding: 20px;
+        width: 100%;
+        h4 {
+            font-family: "Figtree";
+            margin: 0px 2px 0px 2px;
+            padding: 3px 2px 3px 2px;
+            font-weight: 300;
+        }
+        input {
+            margin: 0;
+            font-family: "Figtree";
+            font-size: 16px;
+            width: 99%;
+        }
+    }
+    .notecontentcontainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        .contentheader {
+            width: 85%;
+            font-family: "Figtree";
+            margin: 10px;
+            color: rgb(151, 151, 151);
+            font-weight: 100;
+            div {
+                float: right;
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .notecontent {
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 7px;
+            padding: 20px 40px 20px 40px;
+            width: 80%;
+            font-family: "Figtree";
+            &:hover {
+                background-color: rgb(246, 246, 246);
+            }
+        }
+        .texteditor {
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 7px;
+            padding: 20px 40px 20px 40px;
+            width: 80%;
+            .loginbutton {
+                margin-top: 9px;
+                margin-right: 9px;
+                height: 25px;
+                float: right;
+                box-shadow: none;
+                border-radius: 7px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    hr {
+        width: 100%;
+        height: .5px;
+        margin: 30px 0px 30px 0px;
+        background-color: rgb(203, 203, 203);
+        border: none;
+    }
+}
+
+// ALL
+
+.ql-editor {
+    font-family: "Figtree";
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#root {
+padding: 20px;
+border-radius: 5px;
+background-color: white;
+max-width: 1392px;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.backbutton {
+    float: left;
+    width: 100%;
+    button {
+        height: 30px;
+        border-radius: 3px;
+        font-family: "Figtree";
+        font-size: 17px;
+        border-style: none;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        &:hover {
+            background-color: rgb(230, 230, 230);
+        }
+    }
+}
+
+.loginbutton {
+    height: 30px;
+    background-color: #f1d592;
+    margin-right: 10px;
+    border-style: solid;
+    border-color: #edca78;
+    border-radius: 3px;
+    font-family: "Figtree";
+    font-size: 17px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+        background-color: #edca78;
+    }
+}
+
+.signupbutton {
+    height: 30px;
+    background-color: rgb(222, 222, 222);
+    border-style: solid;
+    border-color: rgb(222, 222, 222);
+    border-radius: 3px;
+    font-family: "Figtree";
+    font-size: 17px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+        background-color: rgb(209, 209, 209);
+    }
+}
+
+.logoutbutton {
+    height: 30px;
+    background-color: rgb(255, 104, 104);
+    border-style: solid;
+    border-color: rgb(255, 108, 108);
+    border-radius: 3px;
+    font-family: "Figtree";
+    font-size: 17px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &:hover {
+        background-color: rgb(253, 86, 86);
+    }
+}
+
+.sitepositionindicator {
+    background-color: rgb(244, 244, 244);
+    border-radius: 7px;
+    padding: 10px;
+    font-family: "Figtree";
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    margin-top: 35.5px;
+    p {
+        margin: 0;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    svg {
+        margin-left: 7px;
+        margin-right: 7px;
+        font-weight: 300;
+        font-size: 12px;
+    }
+}
+
+// NAV
+
+nav {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+    .navbarbuttonscontainer {
+        display: flex;
+        justify-content: flex-end;
+        
+        .navprofilebuttons {
+            display: flex;
+            margin-right: 10px;
+            float: right;
+            &:hover {
+                p{
+                    text-decoration: underline;
+                }
+                img {
+                    border-color: #afafaf
+                }
+            }
+            img {
+                border-radius: 25px;
+                margin-right: 5px;
+                border-style: solid;
+                border-color: #d3d3d3;
+            }
+            p {
+                font-size: 17px;
+                font-family: "Figtree";
+                line-height: 1.75;
+            }
+        }
+    }
+}
+
+
+// * {
+//     border: 1px solid magenta
+// }
+
+// MEDIA
+@media screen and (min-width: 600px) {
+    .aboutsection {
+        max-width: 80%;
+    }
+  }
