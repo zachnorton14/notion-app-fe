@@ -1,6 +1,6 @@
 import NavBar from "./NavBar"
 import { useContext, useEffect, useState } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { CurrentUser } from '../contexts/CurrentUser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import httpClient from "../httpClient"
@@ -59,8 +59,7 @@ function Dashboard() {
                 }
             } catch (error){
                 if (error.response.status === 401) {
-                    console.error(error)
-                    throw "An error occured whilst trying to get user"
+                    throw error
                 }
             }
             navigate(`/dashboard/folder/${item._id['$oid']}`, {state: { folder: item, user: currentUser }})
@@ -68,7 +67,7 @@ function Dashboard() {
             return (
                 <div className={`publicfolder${index + 1}`} key={index} id="folder">
                     <FontAwesomeIcon icon="fa-solid fa-folder" />
-                    <button onClick={redirect}>{item.name}<a style={{float: 'right', color: '#969696', marginRight: '10px'}}>{item.creator}</a></button>
+                    <button onClick={redirect}>{item.name}<span style={{float: 'right', color: '#969696', marginRight: '10px'}}>{item.creator}</span></button>
                 </div>
             )
         })
@@ -108,8 +107,7 @@ function Dashboard() {
             }
         } catch (error){
             if (error.response.status === 401) {
-                console.error(error)
-                throw "An error occured whilst trying to create new note"
+                throw error
             }
         }
     }
@@ -126,8 +124,7 @@ function Dashboard() {
                 }
             } catch (error) {
                 if (error.response.status === 401) {
-                    console.error(error)
-                    throw "Could not get public folders"
+                    throw error
                 } else { console.log(error) }
                 
             }
@@ -147,11 +144,7 @@ function Dashboard() {
                     console.log('no folders found')
                 }
             } catch (error) {
-                if (error.response.status === 401) {
-                    console.error(error)
-                    throw "Could not get user's folder's"
-                } else { console.log(error) }
-                
+                throw error
             }
 
         } 

@@ -43,8 +43,7 @@ export default function EditFolder(props) {
             }
         } catch (error){
             if (error.response.status === 401) {
-                console.error(error)
-                throw "Could not update folder"
+                throw error
             }
     }
       }

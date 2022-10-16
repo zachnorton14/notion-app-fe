@@ -11,7 +11,6 @@ export default function TextEditor(props) {
     useEffect(() => {
       setValue(props.note.content)
     }, [])
-    // setValue(props.note.content)
 
     const submitEdit = async (e) => {
         e.preventDefault()

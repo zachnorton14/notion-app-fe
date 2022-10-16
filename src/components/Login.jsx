@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { CurrentUser } from '../contexts/CurrentUser'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import httpClient from "../httpClient"
 
@@ -35,7 +34,7 @@ function Login(){
                 console.error(error)
                 setMessage(error)
                 setAnError(true)
-                throw "Invalid credentials"
+                throw error
             }
         }
     }

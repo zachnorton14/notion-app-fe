@@ -69,8 +69,7 @@ export default function EditProfile(props) {
             }
         } catch (error){
             if (error.response.status === 401) {
-                console.error(error)
-                throw "An error occured whilst trying to create new note"
+                throw error
             }
         }
       }

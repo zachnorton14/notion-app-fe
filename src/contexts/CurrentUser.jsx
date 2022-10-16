@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect} from "react";
-import httpClient from "../httpClient";
 
 export const CurrentUser = createContext()
 
@@ -10,7 +9,6 @@ function CurrentUserProvider({ children }){
     useEffect(() => {
 
         setCurrentUser(JSON.parse(sessionStorage.getItem('user')))
-        console.log(currentUser)
 
     //     const getLoggedInUser = async () => {
     //         try {

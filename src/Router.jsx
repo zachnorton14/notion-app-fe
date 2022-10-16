@@ -17,7 +17,7 @@ import { faArrowLeft, faPlus, faFolder, faFile, faTriangleExclamation, faFolderO
 
 function App() {
 
-  let { folderId, noteId, userId } = useParams()
+  useParams()
 
   return (
     <CurrentUserProvider>

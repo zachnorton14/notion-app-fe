@@ -18,12 +18,10 @@ function FolderView() {
     const location = useLocation()
 
     const user = location?.state.user
-    let username = location.state.user?.username
 
     const folder = location.state.folder
     let foldercreator = folder.creator
     let folder_id = folder._id['$oid']
-    let isPublished = folder.is_published
 
     const noteSection = notes.map((item, index) => {
         const redirect = () => {
@@ -50,8 +48,7 @@ function FolderView() {
             }
         } catch (error){
             if (error.response.status === 401) {
-                console.error(error)
-                throw "An error occured whilst trying to create new note"
+                throw error
             }
         }
     }
@@ -65,8 +62,7 @@ function FolderView() {
             }
         } catch (error){
             if (error.response.status === 401) {
-                console.error(error)
-                throw "An error occured whilst trying to get user"
+                throw error
             }
         }
     }
@@ -81,8 +77,7 @@ function FolderView() {
             } 
         } catch (error) {
             if (error.response.status === 401) {
-                console.error(error)
-                throw "Could not get this folder's notes"
+                throw error
             }  
             
         }
@@ -103,8 +98,7 @@ function FolderView() {
             } 
         } catch (error) {
             if (error.response.status === 401) {
-                console.error(error)
-                throw "Could not delete this folder"
+                throw error
             }  
             
         }
@@ -119,8 +113,7 @@ function FolderView() {
             } 
         } catch (error) {
             if (error.response.status === 401) {
-                console.error(error)
-                throw "Could not publish this folder"
+                throw error
             }  
             
         }
@@ -137,7 +130,7 @@ function FolderView() {
 
     let publishSection;
 
-	if (currentUser?.username == foldercreator){
+	if (currentUser?.username === foldercreator){
 		editButton = <button className="signupbutton" style={{ float: 'center'}} onClick={editFolder}>Edit</button>
 		deleteButton = <button className="logoutbutton" style={{ float: 'center'}} onClick={deleteFolder}>Delete</button>
         noNotesWarning = <p>You haven't created any notes in this folder yet, hit the plus to create one now.</p>
@@ -166,7 +159,7 @@ function FolderView() {
     <div className="container">
         <NavBar action={'/dashboard'}/>
         <div className="sitepositionindicator">
-            <p><a onClick={back}>Dashboard</a></p>
+            <p><span onClick={back}>Dashboard</span></p>
             <div><FontAwesomeIcon icon="fa-solid fa-chevron-right" /> </div>
             <p>Folder: {folder.name}</p>
         </div>

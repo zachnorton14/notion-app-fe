@@ -1,11 +1,7 @@
-import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CurrentUser } from '../contexts/CurrentUser'
 import NavBar from './NavBar'
 
 function Home() {
-
-    const { currentUser } = useContext(CurrentUser)
 
     return (
         <main className="homecontainer">

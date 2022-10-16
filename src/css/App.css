@@ -891,7 +891,7 @@ body {
 .sitepositionindicator p {
   margin: 0;
 }
-.sitepositionindicator a:hover {
+.sitepositionindicator span:hover {
   text-decoration: underline;
 }
 .sitepositionindicator svg {
@@ -908,6 +908,7 @@ nav {
   position: sticky;
   top: 0;
   display: flex;
+  justify-content: space-between;
 }
 nav h1 {
   width: 100%;
@@ -938,12 +939,6 @@ nav .navbarbuttonscontainer .navprofilebuttons p {
   font-size: 17px;
   font-family: "Figtree";
   line-height: 1.75;
-}
-
-@media screen and (min-width: 600px) {
-  .aboutsection {
-    max-width: 80%;
-  }
 }
 
 /*# sourceMappingURL=app.css.map */

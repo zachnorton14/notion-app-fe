@@ -42,8 +42,7 @@ function NoteView() {
             }
         } catch (error){
             if (error.response.status === 401) {
-                console.error(error)
-                throw "An error occured whilst trying to get user"
+                throw error
             }
         }
         
@@ -67,8 +66,7 @@ function NoteView() {
             }
         } catch (error){
             if (error.response.status === 401) {
-                console.error(error)
-                throw "An error occured whilst trying to get user"
+                throw error
             }
         }
     }
@@ -106,8 +104,7 @@ function NoteView() {
               }
             } catch (error){
                 if (error.response.status === 401) {
-                    console.error(error)
-                    throw "An error occured whilst trying to create new note"
+                    throw error
               }
             }
     }
@@ -121,8 +118,7 @@ function NoteView() {
             } 
           } catch (error) {
             if (error.response.status === 401) {
-              console.error(error)
-              throw "Could not delete this account"
+              throw error
             }  
             
           }
@@ -148,8 +144,7 @@ function NoteView() {
     const cancelEdit = () => {
         setEditMode(false)
     }
-
-    let confirmButton;
+    
     let editButton;
     let deleteButton;
     let dynamicStyling;
@@ -158,7 +153,6 @@ function NoteView() {
     if (currentUser?.username === note.creator){
         editButton = <button className="signupbutton" onClick={editNote}>Edit</button>
         deleteButton = <button className="logoutbutton" onClick={deleteNote}>Delete</button>
-        confirmButton = <button onClick={confirmEdit}>Confirm</button>
     }
 
     if (currentUser?.username !== note.creator){
@@ -171,7 +165,7 @@ function NoteView() {
         <div style={dynamicStyling} onClick={editContent} className="notecontent" dangerouslySetInnerHTML={{__html: note.content}}></div>
     )
 
-    if ( note.content == ''){
+    if ( note.content === ''){
         notecontent = <p className="notecontent" style={{ boxShadow: 'none', textAlign: 'center', dynamicStyling}} onClick={editContent}>Nothing has been jotted down yet...</p>
     }
 
@@ -179,9 +173,9 @@ function NoteView() {
         <div className="container">
             <NavBar action={`/dashboard/folder/${folder._id['$oid']}`} state={redirect} />
             <div className="sitepositionindicator">
-                <p><a onClick={dashboard}>Dashboard</a></p>
+                <p><span onClick={dashboard}>Dashboard</span></p>
                 <div><FontAwesomeIcon icon="fa-solid fa-chevron-right" /> </div>
-                <p><a onClick={back}>Folder: {folder.name}</a></p>
+                <p><span onClick={back}>Folder: {folder.name}</span></p>
                 <div><FontAwesomeIcon icon="fa-solid fa-chevron-right" /> </div>
                 <p>Note: {note.name}</p>
             </div>
@@ -205,7 +199,7 @@ function NoteView() {
                 <hr/>
                 <div className="notecontentcontainer">
                     <div className="contentheader">
-                        {note.content == '' ? <div></div> : note.name}
+                        {note.content === '' ? <div></div> : note.name}
                         <div>{editingContent ? <p onClick={cancelEditingContent}>Cancel Edit</p> : <div></div>}</div>
                     </div>
                     {editingContent ? <TextEditor note={note}/> : notecontent }

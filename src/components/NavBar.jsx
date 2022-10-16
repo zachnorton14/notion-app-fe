@@ -2,7 +2,6 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CurrentUser } from '../contexts/CurrentUser'
-import httpClient from '../httpClient'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function NavBar(props) {
@@ -39,7 +38,7 @@ function NavBar(props) {
         loginActions = (
             <div className="navbarbuttonscontainer">
                 <div className="navprofilebuttons" onClick={redirect}>
-                    <img className="pnavrofilepicture" src={currentUser?.profile_picture} style={{width: '30px', height: '30px'}}></img>
+                    <img className="pnavrofilepicture" src={currentUser?.profile_picture} style={{width: '30px', height: '30px'}} alt={`${currentUser?.username}'s avatar`}></img>
                     <p style={{ margin: 0 }}>{currentUser.username}</p>
                 </div>
                 <button className="logoutbutton" onClick={logout}>Logout</button>
