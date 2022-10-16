@@ -62,7 +62,7 @@ export default function EditProfile(props) {
         e.preventDefault()
     
         try {
-          const response = await httpClient.put(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${currentUser._id['$oid']}`, userProfile)
+          const response = await httpClient.put(`https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${currentUser._id['$oid']}`, userProfile)
             if (response.status === 200) {
                 console.log(response.data.message)
                 window.location.reload()
