@@ -21,7 +21,7 @@ function Login(){
         e.preventDefault()
 
         try {
-            const response = await httpClient.post("https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/authentication", credentials)
+            const response = await httpClient.post("http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/authentication/", credentials)
             if (response.status === 200) {
                 setMessage(response.data.message)
                 // setCurrentUser(response.data.user)

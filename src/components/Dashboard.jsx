@@ -52,7 +52,7 @@ function Dashboard() {
     const publicFolders = allPublicFolders.map((item, index) => {
         const redirect = async () => {
             try { 
-                const response = await httpClient.get(`https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${item.creator}`)
+                const response = await httpClient.get(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${item.creator}/`)
                 if (response.status === 200) {
                     console.log(response.data.message)
                     navigate(`/dashboard/folder/${item._id['$oid']}`, {state: { folder: item, user: response.data.user }})
@@ -100,7 +100,7 @@ function Dashboard() {
 
     const createFolder = async () => {
         try {
-            const response = await httpClient.post("https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/folder", currentUser)
+            const response = await httpClient.post("http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/folder/", currentUser)
             if (response.status === 200) {
                 console.log(response.data.message)
                 navigate(`/dashboard/folder/${response.data.folder._id['$oid']}`, {state: { folder: response.data.folder, user: currentUser }})
@@ -115,7 +115,7 @@ function Dashboard() {
     useEffect(() => {
         const getPublicFolders = async () => {
             try {
-                const response = await httpClient.get("https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/folders/public")
+                const response = await httpClient.get("http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/folders/public/")
                 if (response.status === 200) {
                     console.log(response.data.message)
                     setAllPublicFolders(response.data.folders)
@@ -135,7 +135,7 @@ function Dashboard() {
     useEffect(() => {
         const getUsersFolders = async () => {
             try {
-                const response = await httpClient.get(`https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/user/${user_id}/folders`)
+                const response = await httpClient.get(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/user/${user_id}/folders/`)
                 if (response.status === 200) {
                     console.log(response.data.message)
                     setPersonalPublishedFolders(response.data.folders.filter(element => element.is_published))

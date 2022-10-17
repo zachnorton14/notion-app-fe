@@ -35,7 +35,7 @@ export default function EditFolder(props) {
         console.log(folderPrefs.profile_picture)
     
         try {
-          const response = await httpClient.put(`https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/folder/${folder_id}`, folderPrefs)
+          const response = await httpClient.put(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/folder/${folder_id}/`, folderPrefs)
             if (response.status === 200) {
                 console.log(response.data.message)
                 navigate(`/dashboard/folder/${folder._id['$oid']}`, {state: { folder: folder, user: currentUser }})

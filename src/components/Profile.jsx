@@ -28,7 +28,7 @@ function Profile() {
   
   const deleteAccount = async () => {
     try {
-      const response = await httpClient.delete(`https://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${user?._id['$oid']}`)
+      const response = await httpClient.delete(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${user?._id['$oid']}/`)
       if (response.status === 200) {
         console.log(response.data.message)
         navigate('/dashboard')

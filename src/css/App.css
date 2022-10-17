@@ -796,6 +796,10 @@
   border: none;
 }
 
+.notfound {
+  font-family: "Figtree";
+}
+
 .ql-editor {
   font-family: "Figtree";
 }
@@ -941,4 +945,4 @@ nav .navbarbuttonscontainer .navprofilebuttons p {
   line-height: 1.75;
 }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */

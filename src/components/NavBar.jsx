@@ -33,7 +33,7 @@ function NavBar(props) {
 
     if (currentUser) {
         const redirect = () => {
-            navigate(`/profile/${currentUser._id['$oid']}`, {state: { user: currentUser }})
+            navigate(`/profile/${currentUser._id['$oid']}/`, {state: { user: currentUser }})
         }
         loginActions = (
             <div className="navbarbuttonscontainer">

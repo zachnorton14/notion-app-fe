@@ -30,7 +30,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="dashboard/folder/:folderId" element={<FolderView />} />
           <Route path="dashboard/folder/:folderId/note/:noteId" element={<NoteView />} />
-          <Route element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </CurrentUserProvider>
