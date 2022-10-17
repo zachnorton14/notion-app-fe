@@ -31,7 +31,7 @@ function NoteView() {
 
     const back = async(conditional) => {
         try { 
-            const response = await httpClient.get(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${note.creator}/`)
+            const response = await httpClient.get(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${note.creator}`)
             if (response.status === 200) {
                 console.log(response.data.message)
                 if (conditional === true ) {
@@ -58,7 +58,7 @@ function NoteView() {
 
     const getProfile = async () => {
         try { 
-            const response = await httpClient.get(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${note.creator}/`)
+            const response = await httpClient.get(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/users/${note.creator}`)
             console.log(response.data)
             if (response.status === 200) {
                 console.log(response.data.message)
@@ -97,7 +97,7 @@ function NoteView() {
 
     const confirmEdit = async() => {
         try {
-            const response = await httpClient.put(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/note/${note._id['$oid']}/`, editPrefs)
+            const response = await httpClient.put(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/note/${note._id['$oid']}`, editPrefs)
                 if (response.status === 200) {
                     console.log(response.data.message)
                     window.location.reload()
@@ -111,7 +111,7 @@ function NoteView() {
 
     const deleteNote = async () => {
         try {
-            const response = await httpClient.delete(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/note/${note._id['$oid']}/`)
+            const response = await httpClient.delete(`http://iarchiveapp-env.eba-ezit6mbr.us-east-1.elasticbeanstalk.com/note/${note._id['$oid']}`)
             if (response.status === 200) {
               console.log(response.data.message)
               back()
